@@ -14,6 +14,7 @@ public class Main {
     public static void main(String[] args) {
         int num = 5;
         System.out.println(num + "! = " + getFactorialRec(num));
+        System.out.println(num + " это " + getFibonacci(num));
     }
 
     public static String getFactorialRec(int factorial) {
@@ -24,5 +25,20 @@ public class Main {
             return "1";
         }
         return getFactorialRec(factorial - 1) + "*" + factorial;
+    }
+
+    // Метод не мой, но благодаря ему я постиг новые приёмы магии!
+    public static String getFibonacci(int num) {
+        if (num < 2) {
+            return String.valueOf(num);
+        }
+        return getFibonacciHelper(num, 0, 1);
+    }
+
+    private static String getFibonacciHelper(int num, int a, int b) {
+        if (a + b == num) {
+            return a + "+" + b;
+        }
+        return getFibonacciHelper(num, b, a + b);
     }
 }
