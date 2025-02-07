@@ -16,7 +16,6 @@ public class Main {
         System.out.println(num + "! = " + getFactorialRec(num));
         System.out.println(num + "! = " + getFactorialRecCorrect(num));
         System.out.println(num + " это " + getFibonacci(num));
-//        System.out.println(num + " это " + getFibonacciRecCorrect(num));
 
         for (int i = 0; i < 10; i++) {
             System.out.println("("+i + ") ="+ getFibonacciCorrect(i));
