@@ -14,7 +14,12 @@ public class Main {
     public static void main(String[] args) {
         int num = 5;
         System.out.println(num + "! = " + getFactorialRec(num));
+        System.out.println(num + "! = " + getFactorialRecCorrect(num));
         System.out.println(num + " это " + getFibonacci(num));
+    }
+
+    public static long getFactorialRecCorrect(int num){
+        return num == 1 ? 1 : getFactorialRecCorrect(num - 1) * num;
     }
 
     public static String getFactorialRec(int factorial) {
