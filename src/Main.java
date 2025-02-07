@@ -16,6 +16,11 @@ public class Main {
         System.out.println(num + "! = " + getFactorialRec(num));
         System.out.println(num + "! = " + getFactorialRecCorrect(num));
         System.out.println(num + " это " + getFibonacci(num));
+//        System.out.println(num + " это " + getFibonacciRecCorrect(num));
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("("+i + ") ="+ getFibonacciCorrect(i));
+        }
     }
 
     public static long getFactorialRecCorrect(int num){
@@ -30,6 +35,12 @@ public class Main {
             return "1";
         }
         return getFactorialRec(factorial - 1) + "*" + factorial;
+    }
+
+
+    public static long getFibonacciCorrect(int num) {
+        return (num == 0 || num == 1) ? 1 :
+                getFibonacciCorrect(num - 1) + getFibonacciCorrect(num - 2);
     }
 
     // Метод не мой, но благодаря ему я постиг новые приёмы магии!
